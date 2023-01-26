@@ -10,7 +10,7 @@ const Navbar = () => {
   const handlelogout = async () => {
     try {
       await logOut();
-      navigate("/react-netflixclone");
+      navigate("/react-netflixclone/");
       window.location.reload();
     } catch (error) {
       console.log(error);
@@ -32,7 +32,7 @@ const Navbar = () => {
 
   return (
     <div className={`flex justify-between z-50 fixed w-full p-4 ${navbarClasses} transition duration-300 ease-in`}>
-      <Link to="/home">
+      <Link to="/react-netflixclone/">
         <h1 className="font-bebas text-red-600 text-3xl pt-1 sm:pt-0 sm:text-5xl -ml-2">
           NETFLIX
           <small className="text-xs">clone</small>

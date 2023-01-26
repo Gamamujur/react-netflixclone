@@ -12,7 +12,7 @@ const SignUp = () => {
     e.preventDefault();
     try {
       await signUp(email, password);
-      navigate('/react-netflixclone')
+      navigate('/react-netflixclone/')
     } catch (error) {
       console.log(error);
     }
