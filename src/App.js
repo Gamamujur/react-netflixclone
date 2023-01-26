@@ -22,7 +22,7 @@ const App = () => {
             <Route path='/account' element={<RouteProtect> <Account/> </RouteProtect>} />
         </Routes>
       </AuthContextProvider>
-      {location.pathname === "/" && <Footer />}
+      {location.pathname === "/react-netflixclone/" && <Footer />}
     </>
   );
 };
