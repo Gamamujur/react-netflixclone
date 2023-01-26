@@ -15,7 +15,7 @@ const Login = () => {
     seterror('')
     try {
       await logIn(email, password);
-      navigate('/')
+      navigate('/react-netflixclone')
     } catch (error) {
       console.log(error);
       seterror(error.message)

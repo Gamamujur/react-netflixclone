@@ -16,7 +16,7 @@ const App = () => {
       <AuthContextProvider>
         <Navbar />
         <Routes>
-            <Route path='/' element={<Home/>} />
+            <Route path='/react-netflixclone' element={<Home/>} />
             <Route path='/login' element={<Login/>} />
             <Route path='/signup' element={<SignUp/>} />
             <Route path='/account' element={<RouteProtect> <Account/> </RouteProtect>} />
