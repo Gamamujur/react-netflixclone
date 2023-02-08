@@ -3,7 +3,7 @@ import {MdChevronLeft, MdChevronRight} from "react-icons/md"
 import React, { useEffect, useRef, useState } from "react";
 import Movies from "./Movies";
 
-const Row = ({title, url}) => {
+const Row = ({title, url,...props}, ) => {
     const [movielist,setmovie] = useState([])
 
     const sliderRef = useRef(null);
@@ -32,7 +32,7 @@ const Row = ({title, url}) => {
         <MdChevronLeft size={20} className='bg-white absolute opacity-50 hover:opacity-100 rounded-full left-0 z-10 hidden group-hover:block' onClick={scrollLeft}/>
         <div ref={sliderRef} className='w-full h-full whitespace-nowrap overflow-x-scroll scrollbar-hide scroll-smooth relative overflow-y-hidden'>
             {movielist.map((item,id)=>(
-                <Movies key={id} item={item} />
+                <Movies key={id} item={item} onClick={props.onClick}/>
             ))}
         </div>
         <MdChevronRight size={20} className='bg-white absolute opacity-50 hover:opacity-100 rounded-full right-0 z-10 hidden group-hover:block' onClick={scrollRight}/>
